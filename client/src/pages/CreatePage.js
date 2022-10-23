@@ -14,16 +14,12 @@ export const CreatePage = () =>{
   }, [])
 
   const pressHandler = async event => {
-    if (event.key === 'Enter')
-    {
-      try {
-        const data = await request('/api/link/generate', 'POST', {from: link},{
-          Authorization: `Bearer ${auth.token}`
-        })
-        history.push(`/detail/${data.link._id}`)
-      } catch (e) {
-
-      }
+    try {
+      const data = await request('/api/link/generate', 'POST', {from: link},{
+        Authorization: `Bearer ${auth.token}`
+      })
+      history.push(`/detail/${data.link._id}`)
+    } catch (e) {
     }
   }
 
@@ -36,10 +32,15 @@ export const CreatePage = () =>{
             id='link'
             type='text'
             value={link}
-            onChange={e => setLink(e.target.value)}
-            onKeyPress={pressHandler}/>
+            onChange={e => setLink(e.target.value)}/>
           <label htmlFor='link'>Введіть посилання</label>
         </div>
+        <button
+              className="btn yellow darken-4"
+              style={{marginRight: 10}}
+              onClick={pressHandler}>
+            Створити
+            </button>
       </div>
     </div>
   )

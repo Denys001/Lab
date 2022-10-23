@@ -15,7 +15,7 @@ export const Navbar = () => {
   return (
     <nav>
       <div className="nav-wrapper blue darken-1">
-        <span href='/' className='brand-logo'>GachiClub</span>
+        <span href='/' className='brand-logo'>Cut down a link</span>
         <ul id='nav-mobile' className="right hide-on-med-and-down">
           <li><NavLink to="/links">Посилання</NavLink></li>
           <li><NavLink to="/create">Створити</NavLink></li>
