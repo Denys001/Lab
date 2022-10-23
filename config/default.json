@@ -1,0 +1,6 @@
+{
+    "port" : 5000,
+    "jwtSecret": "Hochy 5",
+    "mongoUri": "mongodb+srv://Denys:qwerty21@cluster0.37arvxl.mongodb.net/?retryWrites=true&w=majority",
+    "baseUrl" : "http://localhost:5000"
+}
